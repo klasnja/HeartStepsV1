@@ -62,18 +62,18 @@ The current dataset is based on `analysis.RData` and `csv.RData` retrieved from 
 1. HeartSteps is an mHealth intervention that encourages regular walking via activity suggestions tailored to the individuals’ current context.  
 1. 6-week micro-randomized trial with 37 participants, notifications could be sent at each of 5 user-specific times/day  
 1. includes the following dataframes: 
-* [`users.csv`](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-users.csv), a 37x120 dataframe  
+* [documentation for `users.csv`](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-users.csv), a 37x117 dataframe  
   **identifier**: *user.index*
-* [`suggestions.csv`](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-suggestions.csv), a 8,274x87 dataframe  
-  **identifier**: *user.index*, *ema.index* and *decision.index*
-* [`jbsteps.csv` and `gfsteps.csv`](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-jawbone.csv), a 197,524x8 dataframe for steps from the phone accelerometer ("Google Fit") and a 237865x11 dataframe for steps from the  jawbone tracker   
-  **identifier**: *user.index*, *ema.index*, *decision.index* and *steps.utime*
+* [documentation for `suggestions.csv`](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-suggestions.csv), a 8,274x86 dataframe  
+  **identifier**: *user.index* and *decision.index*
+* [documentation for `jbsteps.csv` and `gfsteps.csv`](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-jawbone.csv), a 197,524x7 dataframe for steps from the phone accelerometer ("Google Fit") and a 237865x10 dataframe for steps from the  jawbone tracker   
+  **identifier**: *user.index*, *decision.index* and *steps.utime*
 
 
 ## The tables
 
 ### [Users](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-users.csv)
-[`users.csv`](https://github.com/klasnja/HeartStepsV1/blob/main/data_files/users.csv) is a 37x120 data frame that contains demographic information on the participants as well as the results of the intake and exit surveys. Participants were interviewed before the study and after completing it. The exit survey re-administers the activity choice index, self-efficacy for physical activity and the IPAQ. The surveys collected data on the following topics:
+[`users.csv`](https://github.com/klasnja/HeartStepsV1/blob/main/data_files/users.csv) is a 37x117 data frame that contains demographic information on the participants as well as the results of the intake and exit surveys. Participants were interviewed before the study and after completing it. The exit survey re-administers the activity choice index, self-efficacy for physical activity and the IPAQ. The surveys collected data on the following topics:
 * Demographic data
 * Mobile phone use
 * Walking environment at work
@@ -87,7 +87,7 @@ The current dataset is based on `analysis.RData` and `csv.RData` retrieved from 
 
 
 ### [Suggestions](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-suggestions.csv)
-At each of five user-specific times during the day and if the user is available, then whether or not to send a notification is randomized. The walking suggestions and the responses are recorded in [`suggestions.csv`](https://github.com/klasnja/HeartStepsV1/blob/main/data_files/suggestions.csv), a 8,274x87 data frame.  
+At each of five user-specific times during the day and if the user is available, then whether or not to send a notification is randomized. The walking suggestions and the responses are recorded in [`suggestions.csv`](https://github.com/klasnja/HeartStepsV1/blob/main/data_files/suggestions.csv), a 8,274x86 data frame.  
 <!-- <img src="notificationflowchart.png" alt="plot" width="400" > -->
 
 This table includes the following data:
@@ -97,7 +97,7 @@ This table includes the following data:
 * **identifier**: *user.index*, *ema.index* and *decision.index*
 
 ### [Steps](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-jawbone.csv)
-Using the Jawbone tracker as well as the steps measured using the phone accelerometer ("Google fit"), a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in [`jbsteps.csv` and `gfsteps.csv`](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-jawbone.csv), a 197,524x8 dataframe for steps from the Google Fit information and a 237,865x11 dataframe for steps from the  Jawbone tracker dataframe for each user for each minute.  
+Using the Jawbone tracker as well as the steps measured using the phone accelerometer ("Google fit"), a participant's steps were recorded throughout the intervention. The minute-by-minute steps are recorded in [`jbsteps.csv` and `gfsteps.csv`](https://github.com/klasnja/HeartStepsV1/wiki/Documentation-for-jawbone.csv), a 197,524x7 dataframe for steps from the Google Fit information and a 237,865x10 dataframe for steps from the  Jawbone tracker dataframe for each user for each minute.  
 
 **identifier**: *user.index*, *ema.index*, *decision.index* and *steps.utime*
 
